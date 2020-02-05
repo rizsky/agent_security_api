@@ -8,7 +8,7 @@ import (
 	"github.com/micro/go-micro/v2"
 )
 
-const serviceName = "BigAgent/SecurityAPI"
+const serviceName = "BIGAgent/SecurityAPI"
 const serviceVersion = "1.0.0"
 
 func main() {

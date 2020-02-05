@@ -1,4 +1,4 @@
-# BigAgent/SecurityAPI
+# BIGAgent/SecurityAPI
 
 BIG Agent's security-focused microservice.
 
