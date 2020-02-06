@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 
 	"github.com/joho/godotenv"
 	"github.com/micro/cli/v2"
@@ -15,27 +16,26 @@ func main() {
 	godotenv.Load()
 
 	service := createService()
+
 	service.Init(
-		micro.Action(func(context *cli.Context) error {
-			if context.Bool("serve") {
-				if err := service.Run(); err != nil {
-					fmt.Printf("[error] %s\n", err.Error())
-					return err
-				}
-				return nil
-			}
-
-			if context.Bool("migrate") {
+		micro.Action(func(ctx *cli.Context) error {
+			if ctx.Bool("migrate") {
+				// TODO: implement migration here (maybe)
 				fmt.Println("Running DB migrations...")
-				return nil
+				os.Exit(1)
 			}
 
-			if context.Bool("seed") {
+			if ctx.Bool("seed") {
+				// TODO: implement seeding here (maybe)
 				fmt.Println("Running data seeders...")
-				return nil
+				os.Exit(1)
 			}
 
 			return nil
 		}),
 	)
+
+	if err := service.Run(); err != nil {
+		fmt.Println("[error]", err.Error())
+	}
 }

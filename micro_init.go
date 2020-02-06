@@ -11,10 +11,6 @@ func createService() micro.Service {
 		micro.Version(serviceVersion),
 		micro.Flags(
 			&cli.BoolFlag{
-				Name:  "serve",
-				Usage: "Run the microservice",
-			},
-			&cli.BoolFlag{
 				Name:  "migrate",
 				Usage: "Run DB migrations",
 			},
