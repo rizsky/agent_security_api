@@ -8,5 +8,6 @@ require (
 	github.com/micro/cli/v2 v2.1.1
 	github.com/micro/go-micro v1.18.0
 	github.com/micro/go-micro/v2 v2.0.0
+	github.com/micro/go-plugins/broker/kafka/v2 v2.0.1
 	github.com/micro/go-plugins/registry/consul/v2 v2.0.1
 )
