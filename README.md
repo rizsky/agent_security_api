@@ -8,6 +8,8 @@ In `main.go`, there are `serviceName` and `serviceVersion` which represent this 
 
 ## Working on the service
 
+We use Go 1.13.0 with go modules.
+
 We use [go-micro](https://github.com/micro/go-plugins) for handling our general microservice-related process and here's our tech stack for this service:
 
 - Data storage: MongoDB, Redis
