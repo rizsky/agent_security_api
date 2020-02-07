@@ -11,4 +11,5 @@ require (
 	github.com/micro/go-micro/v2 v2.0.0
 	github.com/micro/go-plugins/broker/kafka/v2 v2.0.1
 	github.com/micro/go-plugins/registry/consul/v2 v2.0.1
+	go.mongodb.org/mongo-driver v1.3.0
 )

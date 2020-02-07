@@ -15,8 +15,11 @@ const serviceVersion = "1.0.0"
 func main() {
 	godotenv.Load()
 
-	service := createService()
+	initDatabase()
+	initRepositories()
+	initServices()
 
+	service := createService()
 	service.Init(
 		micro.Action(func(ctx *cli.Context) error {
 			if ctx.Bool("migrate") {
